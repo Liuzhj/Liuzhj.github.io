@@ -1,20 +1,20 @@
-<?xml-stylesheet type="text/xsl" href="http://liuzhj.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://liuzhj.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://liuzhj.github.io/categories/</loc>
+    <loc>https://liuzhj.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://liuzhj.github.io/</loc>
+    <loc>https://liuzhj.github.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://liuzhj.github.io/tags/</loc>
+    <loc>https://liuzhj.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

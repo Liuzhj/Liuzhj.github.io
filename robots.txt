@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://liuzhj.github.io/sitemap.xml
+Sitemap: https://liuzhj.github.io/sitemap.xml

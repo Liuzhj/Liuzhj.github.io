@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2020 18:08:58 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2020 21:42:51 +0800</lastBuildDate>
     
 	<atom:link href="https://liuzhj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>不同数据库数学运算差异</title>
+      <link>https://liuzhj.github.io/post/%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E5%B7%AE%E5%BC%82/</link>
+      <pubDate>Wed, 23 Sep 2020 21:42:51 +0800</pubDate>
+      
+      <guid>https://liuzhj.github.io/post/%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E5%B7%AE%E5%BC%82/</guid>
+      <description>同事跑来问一个问题，说杰哥杰哥， mysql 与 postgresql 的计算结果不同，是什么原因，我们来看看原始 SQL 1 select (40*2.82-106)*0.3836 + (256-196-20)*0.1222 + ((5026-4700-250)/100 * 0.0290); MySQL 中的计算结果 1 2 3 4 5 6 7 mysql&amp;gt; select (40*2.82-106)*0.3836 + (256-196-20)*0.1222 +</description>
+    </item>
     
     <item>
       <title>如何优雅的打造 All in One 仓库</title>

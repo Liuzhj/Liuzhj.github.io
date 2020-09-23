@@ -239,17 +239,17 @@ systemctl start nexus
 <p><code>登录后记得修改 admin 密码</code></p>
 <h3 id="配置-yum-proxy">配置 yum proxy</h3>
 <p>创建 repository</p>
-<p><img src=".%5C1599577675600.png" alt="1599577675600"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599577675600.png" alt="1599577675600"></p>
 <p>选择 &ldquo;yum(proxy)&rdquo;</p>
-<p><img src=".%5C1599577716704.png" alt="1599577716704"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599577716704.png" alt="1599577716704"></p>
 <p>确定清华 Yum 仓库地址</p>
-<p><img src=".%5C1599578954175.png" alt="1599578954175"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599578954175.png" alt="1599578954175"></p>
 <p>填写 &ldquo;name&rdquo; 和 &ldquo;Remote storage&rdquo;，注意 &ldquo;Remote storage&rdquo; 需要以 &ldquo;/&rdquo; 结尾</p>
-<p><img src=".%5C1599577817808.png" alt="1599577817808"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599577817808.png" alt="1599577817808"></p>
 <p>Repository 创建完成后</p>
-<p><img src=".%5C1599577877505.png" alt="1599577877505"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599577877505.png" alt="1599577877505"></p>
 <p>确定 Repository 的状态，&ldquo;Online - Remote Available&rdquo; 才是正确状态哦</p>
-<p><img src=".%5C1599577920522.png" alt="1599577920522"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599577920522.png" alt="1599577920522"></p>
 <p>编写客户端 Yum 配置文件，注意 &ldquo;baseurl&rdquo; 也需要以 &ldquo;/&rdquo; 结尾！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -281,7 +281,7 @@ yum install http
 </code></pre></td></tr></table>
 </div>
 </div><p>安装完成后查看仓储中已经有了已安装过的 rpm 包</p>
-<p><img src=".%5C1599578105350.png" alt="1599578105350"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599578105350.png" alt="1599578105350"></p>
 <p>看到这里，不知道各位小伙伴有没有看明白，以上操作是我们使用 Nexus 仓库中 Yum proxy 的功能，创建了一个代理清华 Yum 源的 Repository，然后在内网的机器上，配置好指向 Nexus 中的 Repository，这时再安装软件，就会通过 Nexus 找到清华 Yum 源中的软件包进行安装。</p>
 <p>只要运维同学使用了配置好的 Yum 源，所有安装过的软件都会记录在这里。到时测试完成后，批量把软件包进行下载，再通过 Nexus 创建私有仓储即可完美使用。</p>
 <p>软件包有两种情况</p>
@@ -317,27 +317,27 @@ yum install httpd -y
 </code></pre></td></tr></table>
 </div>
 </div><p>可以看到，出现了一个 &ldquo;6&rdquo; 的目录，分支下也生成了 http 相关的 rpm 包</p>
-<p><img src=".%5C1599581397056.png" alt="1599581397056"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599581397056.png" alt="1599581397056"></p>
 <p>大家想想看，这是为什么呢？</p>
 <h2 id="情景二">情景二</h2>
 <p>一个 DB 小 A 跑来找我，说杰哥，我要装个 MySQL 8.0，可是咱们内网 Yum 源里没安装包呀，公司下载又特别慢，你有没有办法呀？</p>
 <p>我看了他一眼，告诉他，信杰哥，不翻车。大家说说我们有什么办法来帮助他呢？</p>
 <h3 id="找到-mysql-官方-yum-源">找到 MySQL 官方 Yum 源</h3>
-<p><img src=".%5C1599581811889.png" alt="1599581811889"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599581811889.png" alt="1599581811889"></p>
 <p>下载下来，定晴一看，怎么是个 rpm 包呀？ 不慌，rpm 本身就是个压缩包，我们用压缩工具打开看看</p>
-<p><img src=".%5C1599581974846.png" alt="1599581974846"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599581974846.png" alt="1599581974846"></p>
 <p>原来 repo 文件藏在里面呀，这里有两个 repo 文件</p>
 <ul>
 <li>mysql-community-source.repo</li>
 <li>mysql-community.repo</li>
 </ul>
 <p>让我们来猜猜，带有 source 的，是有关源码的仓库，不带 source 的，是编译好打包的 rpm 包，我们直接打开 mysql-community.repo，赫然看到，原来 MySQL 官方 Yum 源都在这里呢，里面内容相信大家都不陌生吧。</p>
-<p><img src=".%5C1599582197999.png" alt="1599582197999"></p>
-<p><img src=".%5C1599582327798.png" alt="1599582327798"></p>
-<p><img src=".%5C1599582370172.png" alt="1599582370172"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599582197999.png" alt="1599582197999"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599582327798.png" alt="1599582327798"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599582370172.png" alt="1599582370172"></p>
 <p>看到这里，是不是大家又明白点什么了！没错，有了官方 Yum 源地址，我们就可以在 Nexus 上创建 Yum proxy</p>
-<p><img src=".%5C1599582717737.png" alt="1599582717737"></p>
-<p><img src=".%5C1599582746875.png" alt="1599582746875"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599582717737.png" alt="1599582717737"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599582746875.png" alt="1599582746875"></p>
 <h3 id="编写-repo-文件">编写 repo 文件</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -366,9 +366,9 @@ gpgcheck=0
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">yum install yum install mysql-community-client-8.0.11 mysql-community-server-8.0.11
 </code></pre></td></tr></table>
 </div>
-</div><p><img src=".%5C1599610498808.png" alt="1599610498808"></p>
+</div><p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599610498808.png" alt="1599610498808"></p>
 <p>同样，此 Yum 源同时支持 CentOS 6 和 CentOS 7，把同样的 repo 文件放到 CentOS 6 机器上，执行安装。</p>
-<p><img src=".%5C1599610814978.png" alt="1599610814978"></p>
+<p><img src="https://raw.githubusercontent.com/Liuzhj/picrepo/master/img/1599610814978.png" alt="1599610814978"></p>
 <h2 id="情景三">情景三</h2>
 <p>这一天，又一个运维小哥跑来找我，说杰哥杰哥，我们这次有好多需求，要下载好多 docker 镜像，又要下载好多 pypi 镜像，还要安装各个版本的 MySQL，我们搞不定啦，快来支持我们一下啊~~~</p>
 <p>我吐……这下杰哥帮不了你了，给你份文档自己看着办吧。哈哈</p>

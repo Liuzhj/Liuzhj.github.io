@@ -3,14 +3,21 @@
   
   <url>
     <loc>https://liuzhj.github.io/</loc>
-    <lastmod>2020-09-23T21:42:51+08:00</lastmod>
+    <lastmod>2020-09-24T16:43:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuzhj.github.io/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/</loc>
+    <lastmod>2020-09-24T16:43:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://liuzhj.github.io/post/</loc>
-    <lastmod>2020-09-23T21:42:51+08:00</lastmod>
+    <lastmod>2020-09-24T16:43:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

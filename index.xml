@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2020 21:42:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2020 16:43:31 +0800</lastBuildDate>
     
 	<atom:link href="https://liuzhj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PG只读用户</title>
+      <link>https://liuzhj.github.io/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Thu, 24 Sep 2020 16:43:31 +0800</pubDate>
+      
+      <guid>https://liuzhj.github.io/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/</guid>
+      <description>创建只读用户 1 2 3 4 5 CREATE ROLE &amp;#34;app-reader&amp;#34; WITH LOGIN password &amp;#39;xxx&amp;#39;; GRANT CONNECT ON DATABASE db_xx TO &amp;#34;app-reader&amp;#34;; GRANT USAGE ON SCHEMA public TO &amp;#34;app-reader&amp;#34;; GRANT SELECT ON ALL TABLES IN SCHEMA public TO &amp;#34;app-reader&amp;#34;; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &amp;#34;app-reader&amp;#34;;</description>
+    </item>
     
     <item>
       <title>不同数据库数学运算差异</title>

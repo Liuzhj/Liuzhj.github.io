@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Even - A super concise theme for Hugo</title>
+  <title>PG只读用户 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="DBA-Liuzj" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="DBA-Liuzj" /><meta name="description" content="创建只读用户 1 2 3 4 5 CREATE ROLE &amp;#34;app-reader&amp;#34; WITH LOGIN password &amp;#39;xxx&amp;#39;; GRANT CONNECT ON DATABASE db_xx TO &amp;#34;app-reader&amp;#34;; GRANT USAGE ON SCHEMA public TO &amp;#34;app-reader&amp;#34;; GRANT SELECT ON ALL TABLES IN SCHEMA public TO &amp;#34;app-reader&amp;#34;; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &amp;#34;app-reader&amp;#34;;" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
-<link rel="canonical" href="https://liuzhj.github.io/" />
-  <link href="https://liuzhj.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
-  <link href="https://liuzhj.github.io/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+<link rel="canonical" href="https://liuzhj.github.io/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,15 +38,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Even - A super concise theme for Hugo" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://liuzhj.github.io/" />
-<meta property="og:updated_time" content="2020-09-24T16:43:31+08:00" />
-<meta itemprop="name" content="Even - A super concise theme for Hugo">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:title" content="PG只读用户" />
+<meta property="og:description" content="创建只读用户 1 2 3 4 5 CREATE ROLE &#34;app-reader&#34; WITH LOGIN password &#39;xxx&#39;; GRANT CONNECT ON DATABASE db_xx TO &#34;app-reader&#34;; GRANT USAGE ON SCHEMA public TO &#34;app-reader&#34;; GRANT SELECT ON ALL TABLES IN SCHEMA public TO &#34;app-reader&#34;; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &#34;app-reader&#34;;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liuzhj.github.io/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/" />
+<meta property="article:published_time" content="2020-09-24T16:43:31+08:00" />
+<meta property="article:modified_time" content="2020-09-24T16:43:31+08:00" />
+<meta itemprop="name" content="PG只读用户">
+<meta itemprop="description" content="创建只读用户 1 2 3 4 5 CREATE ROLE &#34;app-reader&#34; WITH LOGIN password &#39;xxx&#39;; GRANT CONNECT ON DATABASE db_xx TO &#34;app-reader&#34;; GRANT USAGE ON SCHEMA public TO &#34;app-reader&#34;; GRANT SELECT ON ALL TABLES IN SCHEMA public TO &#34;app-reader&#34;; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &#34;app-reader&#34;;">
+<meta itemprop="datePublished" content="2020-09-24T16:43:31&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-24T16:43:31&#43;08:00" />
+<meta itemprop="wordCount" content="54">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PG只读用户"/>
+<meta name="twitter:description" content="创建只读用户 1 2 3 4 5 CREATE ROLE &#34;app-reader&#34; WITH LOGIN password &#39;xxx&#39;; GRANT CONNECT ON DATABASE db_xx TO &#34;app-reader&#34;; GRANT USAGE ON SCHEMA public TO &#34;app-reader&#34;; GRANT SELECT ON ALL TABLES IN SCHEMA public TO &#34;app-reader&#34;; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &#34;app-reader&#34;;"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,99 +114,80 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/">PG只读用户</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-09-24 </span>
-      
-        <span class="more-meta"> 54 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      创建只读用户 1 2 3 4 5 CREATE ROLE &#34;app-reader&#34; WITH LOGIN password &#39;xxx&#39;; GRANT CONNECT ON DATABASE db_xx TO &#34;app-reader&#34;; GRANT USAGE ON SCHEMA public TO &#34;app-reader&#34;; GRANT SELECT ON ALL TABLES IN SCHEMA public TO &#34;app-reader&#34;; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &#34;app-reader&#34;;
-    </div>
-    <div class="read-more">
-      <a href="/post/pg%E5%8F%AA%E8%AF%BB%E7%94%A8%E6%88%B7/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E5%B7%AE%E5%BC%82/">不同数据库数学运算差异</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-09-23 </span>
-      
-        <span class="more-meta"> 673 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      同事跑来问一个问题，说杰哥杰哥， mysql 与 postgresql 的计算结果不同，是什么原因，我们来看看原始 SQL 1 select (40*2.82-106)*0.3836 + (256-196-20)*0.1222 + ((5026-4700-250)/100 * 0.0290); MySQL 中的计算结果 1 2 3 4 5 6 7 mysql&gt; select (40*2.82-106)*0.3836 + (256-196-20)*0.1222 +
-    </div>
-    <div class="read-more">
-      <a href="/post/%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E5%B7%AE%E5%BC%82/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%89%93%E9%80%A0-all-in-one-%E4%BB%93%E5%BA%93/">如何优雅的打造 All in One 仓库</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-09-23 </span>
-      
-        <span class="more-meta"> 1697 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      做过大型项目的同学一定都搞过自定义 yum 仓库，自定义 yum 在网上也有很多种方案，但今天我们来个不一样的玩法！ 在开始之前先来抛出几个问题 如何快速的制作
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%89%93%E9%80%A0-all-in-one-%E4%BB%93%E5%BA%93/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/tinc%E7%A9%BF%E9%80%8F/">Tinc穿透</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-04-04 </span>
-      
-        <span class="more-meta"> 296 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      VPS 服务端部署 使用的是搬瓦工 VPS，机器还是借用同事的，哈哈 …… 项目 配置 CPU 双核 内存 1 G 操作系统 OS CentOS 7 安装软件包，可以从epel源中直接安装 tinc 1
-    </div>
-    <div class="read-more">
-      <a href="/post/tinc%E7%A9%BF%E9%80%8F/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
+          <article class="post">
     
-    
-  </nav>
+    <header class="post-header">
+      <h1 class="post-title">PG只读用户</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-09-24 </span>
+        
+          <span class="more-meta"> 54 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>创建只读用户</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">CREATE ROLE &#34;app-reader&#34; WITH LOGIN password &#39;xxx&#39;;
+GRANT CONNECT ON DATABASE db_xx TO &#34;app-reader&#34;;
+GRANT USAGE ON SCHEMA public TO &#34;app-reader&#34;;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO &#34;app-reader&#34;;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO &#34;app-reader&#34;;
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">DBA-Liuzj</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-09-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E5%B7%AE%E5%BC%82/">
+            <span class="next-text nav-default">不同数据库数学运算差异</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
